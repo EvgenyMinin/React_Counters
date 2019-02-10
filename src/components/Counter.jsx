@@ -13,7 +13,7 @@ class Counter extends Component {
     }
 
     getBadgeClasses() {
-        let classes = 'badge  m-2 badge-';
+        let classes = 'badge m-2 badge-';
         classes += this.state.count === 0 ? 'warning' : 'primary';
 
         return classes;
@@ -24,8 +24,8 @@ class Counter extends Component {
         return count === 0 ? 'Zero' : count;
     }
 
-    handleIncrement() {
-        console.log('Increment clicked');
+    handleIncrement = () => {
+        this.setState({ count: this.state.count + 1 });
     }
 
     render() {        
